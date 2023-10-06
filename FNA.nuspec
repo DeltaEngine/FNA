@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>FNA</id>
+        <version>23.10</version>
+        <description>FNA library with all required dependencies in .Net 7 to replace XNA 4.0, this is NOT recommended by the FNA developers https://github.com/FNA-XNA/FNA/wiki/0:-FAQ#where-is-the-nuget-package however our workflow uses nuget for everything external and this is very helpful to get old XNA projects up and running quickly on Windows with Visual Studio.</description>
+        <authors>DeltaEngine</authors>
+        <projectUrl>https://fna-xna.github.io/</projectUrl>
+        <license type="expression">MIT</license>
+        <icon>images/FNA.png</icon>
+    </metadata>
+    <files>
+        <!-- binding libraries -->
+        <file src="bin\x64\Release\net7.0\FNA.dll" target="lib\net7" />
+        <!-- native libraries -->
+        <file src="lib\lib64\*.*" target="native/lib64"/>
+        <file src="lib\osx\*.*" target="native/osx"/>
+        <file src="lib\x64\*.*" target="native/x64"/>
+        <!-- targets file -->
+        <file src="FNA.targets" target="build/"/>
+        <!-- images -->
+        <file src="FNA.png" target="images\" />
+    </files>
+   
+</package>

@@ -1,6 +1,6 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;net7.0</TargetFrameworks>
+		<TargetFrameworks>net7.0</TargetFrameworks>
 		<Platforms>x64</Platforms>
 	</PropertyGroup>
 	<PropertyGroup>
@@ -12,6 +12,10 @@
 	</PropertyGroup>
 	<PropertyGroup>
 		<FNASettingsPropsFilePath>$(SolutionDir)FNA.Settings.props</FNASettingsPropsFilePath>
+		<AssemblyVersion>23.10</AssemblyVersion>
+		<FileVersion>23.10</FileVersion>
+		<Version>23.10</Version>
+		<NuspecFile>FNA.nuspec</NuspecFile>
 	</PropertyGroup>
 	<Import Project="$(FNASettingsPropsFilePath)" Condition="Exists('$(FNASettingsPropsFilePath)')" />
 	<Target Name="ValidatePropsFilePath" BeforeTargets="BeforeBuild">
